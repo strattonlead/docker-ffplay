@@ -15,7 +15,8 @@ RUN apt-get install -y bash \
     libv4l-0 \
     xvfb \
     fonts-symbola \
-	ffmpeg
+	ffmpeg \
+	libgl1-mesa-dri 
 	
 ENTRYPOINT [ "ffplay" ]
-CMD [ "-loop 0"]
+CMD [ "-loop", "0", "-i", "/var/content/video.mp4"]
